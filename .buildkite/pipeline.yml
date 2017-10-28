@@ -1,0 +1,5 @@
+steps:
+  - label: ":python: Test"
+    commands:
+      - pipenv install --deploy
+      - pipenv run py.test
