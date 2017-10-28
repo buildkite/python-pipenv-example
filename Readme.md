@@ -14,7 +14,7 @@ The [pipeline.yml](.buildkite/pipeline.yml) installs your dependencies and runs 
 steps:
   - label: ":python: Test"
     commands:
-      - pipenv install --deploy
+      - pipenv install --deploy --dev
       - pipenv run py.test
 ```
 
