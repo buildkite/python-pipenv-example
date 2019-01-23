@@ -1,4 +1,4 @@
 name: "Python Pipenv Example"
 steps: 
-  - label: ":pipeline:",
+  - label: ":pipeline:"
     command: "buildkite-agent pipeline upload"
