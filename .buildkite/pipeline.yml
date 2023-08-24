@@ -1,5 +1,4 @@
 steps:
   - label: ":python:"
     commands:
-      - pipenv install --deploy --dev
-      - pipenv run py.test
+      - python3 .buildkite/dbt_cloud_ci.py 
