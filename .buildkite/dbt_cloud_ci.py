@@ -10,7 +10,8 @@ parser = argparse.ArgumentParser()
 parser.add_argument("-s", "--steps", type=str, nargs="+")
 args = parser.parse_args()
 
-# fmt: off
+# fmt: off 
+#TODO: Refactor environment variables
 api_base        = os.getenv("DBT_CLOUD_URL", "https://au.dbt.com")
 job_cause       = os.getenv("DBT_CLOUD_JOB_CAUSE", "github_actions_pull_request")
 git_branch      = os.getenv("DBT_CLOUD_JOB_BRANCH", None)
