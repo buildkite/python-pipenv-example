@@ -15,21 +15,13 @@
     },
     "default": {},
     "develop": {
-        "py": {
-            "hashes": [
-                "sha256:21b81bda15b66ef5e1a777a21c4dcd9c20ad3efd0b3f817e7a809035269e1bd3",
-                "sha256:3b80836aa6d1feeaa108e046da6423ab8f6ceda6468545ae8d02d9d58d18818a"
-            ],
-            "index": "pypi",
-            "version": "==1.10.0"
-        },
         "pytest": {
             "hashes": [
                 "sha256:27fa6617efc2869d3e969a3e75ec060375bfb28831ade8b5cdd68da3a741dc3c",
                 "sha256:81a25f36a97da3313e1125fce9e7bbbba565bc7fec3c5beb14c262ddab238ac1"
             ],
             "index": "pypi",
-            "version": "==3.2.3"
+            "version": "==7.2.0"
         }
     }
 }
