@@ -1,5 +1,6 @@
-# Used by the 'Add to Buildkite' button in the readme
-name: "Python Pipenv Example"
-steps: 
-  - label: ":pipeline:"
-    command: "buildkite-agent pipeline upload"
+name: "Python (pipenv) Example"
+description: "An example pipeline for testing a Python project using pipenv"
+emoji: ":python:"
+steps:
+  - command: "buildkite-agent pipeline upload"
+    label: ":pipeline:"
