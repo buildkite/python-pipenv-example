@@ -14,7 +14,7 @@ See the full [Getting Started Guide](https://buildkite.com/docs/guides/getting-s
 [![Add to Buildkite](https://buildkite.com/button.svg)](https://buildkite.com/new)
 
 <a href="https://buildkite.com/buildkite/python-pipenv-example/builds/latest?branch=main">
-  <img width="2400" alt="Screenshot of example pipeline build page" src=".buildkite/screenshot.png" />
+  <img width="2400" height="1600" alt="Screenshot of example pipeline build page" src=".buildkite/screenshot.png" />
 </a>
 
 ## How does it work?
