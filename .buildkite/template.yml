@@ -1,6 +1,10 @@
 name: "Python (pipenv) Example"
-description: "An example pipeline for testing a Python project using pipenv"
+description: "An example pipeline that tests a Python project using pipenv for dependency management."
 emoji: ":python:"
+color: "#EFF9FF"
+languages:
+  - "Python"
+  - "YAML"
 steps:
-  - command: "buildkite-agent pipeline upload"
-    label: ":pipeline:"
+  - label: ":pipeline:"
+    command: "buildkite-agent pipeline upload"
