@@ -31,6 +31,8 @@ steps:
       - pipenv run py.test
 ```
 
+> 💡 Looking for a Docker-based setup instead? Check out the [Python Docker Example](https://github.com/buildkite/python-docker-example).
+
 ## License
 
 See [LICENSE](LICENSE) (MIT)
