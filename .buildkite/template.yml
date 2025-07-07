@@ -4,7 +4,6 @@ emoji: ":python:"
 color: "#EFF9FF"
 languages:
   - "Python"
-  - "YAML"
 steps:
   - label: ":pipeline:"
     command: "buildkite-agent pipeline upload"
