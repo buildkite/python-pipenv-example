@@ -1,6 +1,6 @@
 # Buildkite Python (pipenv) Example
 
-[![Build status](https://badge.buildkite.com/f685180f6d059ee86697f997693e43237baebe1d0044707587.svg?branch=main)](https://buildkite.com/buildkite/python-pipenv-example)
+[![Build status](https://badge.buildkite.com/f685180f6d059ee86697f997693e43237baebe1d0044707587.svg?branch=main)](https://buildkite.com/buildkite/python-pipenv-example/builds/latest?branch=main)
 [![Add to Buildkite](https://img.shields.io/badge/Add%20to%20Buildkite-14CC80)](https://buildkite.com/new)
 
 This repository is an example [Buildkite](https://buildkite.com/) pipeline that tests a [Python](https://python.org) project using [pipenv](https://github.com/kennethreitz/pipenv).
@@ -32,6 +32,8 @@ steps:
 ```
 
 > 💡 Looking for a Docker-based setup instead? Check out the [Python Docker Example](https://github.com/buildkite/python-docker-example).
+
+<!-- docs:end -->
 
 ## License
 
