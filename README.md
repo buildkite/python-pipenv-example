@@ -26,6 +26,9 @@ This example:
 - Uses [Buildkite Cache](https://buildkite.com/docs/pipelines/configure/cache) to
   reuse downloaded Python packages across builds
 
+The cache commands use [`.buildkite/cache.yml`](.buildkite/cache.yml), so copy
+that file alongside the example step.
+
 Example pipeline step:
 ```yml
 steps:
