@@ -27,7 +27,9 @@ This example:
   reuse downloaded Python packages across builds
 
 The cache commands use [`.buildkite/cache.yml`](.buildkite/cache.yml), so copy
-that file alongside the example step.
+that file alongside the example step. A `Pipfile.lock` change creates a new entry
+but can fall back to a compatible entry from the same pipeline, branch, platform,
+and Python minor version.
 
 Example pipeline step:
 ```yml
