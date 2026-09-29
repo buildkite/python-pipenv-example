@@ -1,6 +1,11 @@
 image: "sorchaabel/python-pipenv-pipeline-example:1.0"
 steps:
   - label: ":python:"
-    commands:
-      - pipenv install --deploy --dev
-      - pipenv run py.test
+    command: |
+      export PYTHON_CACHE_VERSION="$$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
+      export PIP_CACHE_DIR="$$HOME/.cache/buildkite-python-pipenv-example/pip"
+      export PIPENV_CACHE_DIR="$$HOME/.cache/buildkite-python-pipenv-example/pipenv"
+      buildkite-agent cache restore
+      pipenv install --deploy --dev
+      buildkite-agent cache save
+      pipenv run py.test

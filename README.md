@@ -23,14 +23,26 @@ This example:
 - Assumes Python and pipenv are installed on the agent
 - Installs dependencies with `pipenv install --deploy --dev`
 - Runs tests using `pipenv run py.test`
+- Uses [Buildkite Cache](https://buildkite.com/docs/pipelines/configure/cache) to
+  reuse downloaded Python packages across builds
+
+The cache commands use [`.buildkite/cache.yml`](.buildkite/cache.yml), so copy
+that file alongside the example step. A `Pipfile.lock` change creates a new entry
+but can fall back to a compatible entry from the same pipeline, branch, platform,
+and Python minor version.
 
 Example pipeline step:
 ```yml
 steps:
   - label: ":python: Test"
-    commands:
-      - pipenv install --deploy --dev
-      - pipenv run py.test
+    command: |
+      export PYTHON_CACHE_VERSION="$$(python -c 'import sys; print(f"{sys.version_info.major}.{sys.version_info.minor}")')"
+      export PIP_CACHE_DIR="$$HOME/.cache/buildkite-python-pipenv-example/pip"
+      export PIPENV_CACHE_DIR="$$HOME/.cache/buildkite-python-pipenv-example/pipenv"
+      buildkite-agent cache restore
+      pipenv install --deploy --dev
+      buildkite-agent cache save
+      pipenv run py.test
 ```
 
 > 💡 Looking for a Docker-based setup instead? Check out the [Python Docker Example](https://github.com/buildkite/python-docker-example).

@@ -1,0 +1,12 @@
+caches:
+  - name: pip
+    cache_key:
+      - python-pipenv-example-v1
+      - { agent: pipeline }
+      - { agent: branch }
+      - { agent: os }
+      - { agent: arch }
+      - { env: PYTHON_CACHE_VERSION, fallback_limit: true }
+      - { checksum: Pipfile.lock }
+    target_paths:
+      - ~/.cache/buildkite-python-pipenv-example
